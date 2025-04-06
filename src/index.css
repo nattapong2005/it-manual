@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Anuphan";
+  src: url("./font/Anuphan-Regular.ttf");
+}
+@font-face {
+  font-family: "Anuphan-Bold";
+  src: url("./font/Anuphan-Bold.ttf");
+}
+
+* {
+  font-family: "Anuphan"; 
+}
+h1 {
+  font-family: "Anuphan-Bold" !important;
+}
+body {
+  background-color: #f6f9fc;
+}
+
+@keyframes zoom {
+  0%, 100% {
+    transform: scale(1); 
+  }
+  50% {
+    transform: scale(1.09); 
+  }
+}
+
+.zoom-logo {
+  animation: zoom 4s infinite ease-in-out;
+}
