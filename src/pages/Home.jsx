@@ -15,7 +15,13 @@ import {
   CheckCircle,
   CheckCircle2,
   Laptop,
+  Computer,
+  Server,
+  Network,
+  AppWindow,
+  Printer,
 } from "lucide-react";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
   const troubleshootingGuides = [
@@ -46,7 +52,7 @@ const Home = () => {
       title: "ปัญหาด้านเน็ตเวิร์ค",
       icon: <Wifi className="h-5 w-5" />,
       steps: [
-        "รีสตาร์ทเราเตอร์",
+        "ปิดแอปพลิเคชันที่ไม่จำเป็น",
         "ตรวจสอบการเชื่อมต่อสายแลน",
         "ตรวจสอบว่าเปิดใช้งาน Wi-Fi บนอุปกรณ์แล้ว",
         "ติดต่อแผนกไอทีหากยังไม่สามารถเชื่อมต่อได้",
@@ -83,17 +89,17 @@ const Home = () => {
             <p className="max-w-[800px] text-slate-400 md:text-xl lg:text-2xl mt-4">วิธีแก้ปัญหาไอทีที่พบบ่อยเบื้องต้น</p>
             <div className="w-full max-w-md h-0.5 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 rounded-full  opacity-50"></div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 w-full max-w-5xl">
-              <div className="flex flex-col items-center p-5 rounded-lg border border-slate-800 bg-slate-900/50 backdrop-blur-sm hover:bg-black/20">
+              <div className="flex flex-col items-center p-5 hover:bg-black/20">
                 <Settings className="h-8 w-8 text-blue-400 mb-2" />
                 <h3 className="text-lg font-medium text-white">ปัญหาต่างๆเกี่ยวกับไอที</h3>
                 <p className="text-sm text-slate-400 mt-1">หัวข้อปัญหาต่างๆที่พบได้ภายในบริษัท</p>
               </div>
-              <div className="flex flex-col items-center p-5 rounded-lg border border-slate-800 bg-slate-900/50 backdrop-blur-sm hover:bg-black/20">
+              <div className="flex flex-col items-center p-5 hover:bg-black/20">
                 <AlertCircle className="h-8 w-8 text-red-400 mb-2" />
                 <h3 className="text-lg font-medium text-white">การแก้ไขปัญหา</h3>
                 <p className="text-sm text-slate-400 mt-1">วิธีแก้ปัญหาทีละขั้นตอนสำหรับปัญหาทั่วไป</p>
               </div>
-              <div className="flex flex-col items-center p-5 rounded-lg border border-slate-800 bg-slate-900/50 backdrop-blur-sm hover:bg-black/20">
+              <div className="flex flex-col items-center p-5 hover:bg-black/20">
                 <WrenchIcon className="h-8 w-8 text-yellow-400 mb-2" />
                 <h3 className="text-lg font-medium text-white">การบำรุงรักษาเชิงป้องกัน</h3>
                 <p className="text-sm text-slate-400 mt-1">รักษาระบบของคุณให้ทำงานได้อย่างราบรื่น</p>
@@ -114,6 +120,71 @@ const Home = () => {
                 ติดต่อเรา
                 <PhoneCall className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="container mx-auto py-32">
+        <h1 className="text-4xl font-bold text-center flex items-center justify-center">
+          <span className="w-32 h-1 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600"></span>
+          <h1 className="mx-5 text-5xl font-medium text-blue-800">หมวดหมู่ปัญหา</h1>
+          <span className="w-32 h-1 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600"></span>
+        </h1>
+        <p className="mt-3 text-slate-500 md:text-lg text-center">คุณกำลังพบปัญหาเหล่านี้อยู่ใช่หรือไม่ ?</p>
+        <div className="flex justify-center px-5">
+          <div className="grid grid-cols-1 md:grid-cols-4 mt-10 w-full max-w-6xl gap-5">
+            <div className="flex flex-col items-center p-5 bg-white shadow-md rounded-lg">
+              <Laptop className="h-8 w-8 text-blue-400 mb-5" />
+              <h3 className="text-lg font-bold text-blue-800">คอมพิวเตอร์เปิดไม่ติด</h3>
+              <div className="mt-5">
+                <NavLink
+                  to={"/hardware"}
+                  className="inline-flex h-10 items-center justify-center rounded-lg border bg-blue-500  px-5 text-sm font-medium text-white shadow-md transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 group"
+                >
+                  อ่านเพิ่มเติม
+                  <Book className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </NavLink>
+              </div>
+            </div>
+            <div className="flex flex-col items-center p-5 bg-white shadow-md rounded-lg">
+              <Server className="h-8 w-8 text-red-400 mb-5" />
+              <h3 className="text-lg font-bold text-blue-800">โปรแกรมค้างหรือไม่ตอบสนอง</h3>
+              <div className="mt-5">
+                <NavLink
+                  to={"/software"}
+                  className="inline-flex h-10 items-center justify-center rounded-lg border bg-blue-500  px-5 text-sm font-medium text-white shadow-md transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 group"
+                >
+                  อ่านเพิ่มเติม
+                  <Book className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </NavLink>
+              </div>
+            </div>
+            <div className="flex flex-col items-center p-5 bg-white shadow-md rounded-lg">
+              <Wifi className="h-8 w-8 text-yellow-400 mb-5" />
+              <h3 className="text-lg font-bold text-blue-800">เชื่อมต่อ Wi-Fi ไม่ได้</h3>
+              <div className="mt-5">
+                <NavLink
+                  to={"/network"}
+                  className="inline-flex h-10 items-center justify-center rounded-lg border bg-blue-500  px-5 text-sm font-medium text-white shadow-md transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 group"
+                >
+                  อ่านเพิ่มเติม
+                  <Book className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </NavLink>
+              </div>
+            </div>
+            <div className="flex flex-col items-center p-5 bg-white shadow-md rounded-lg">
+              <Printer className="h-8 w-8 text-green-400 mb-5" />
+              <h3 className="text-lg font-bold text-blue-800">เครื่องปริ้นเตอร์ไม่ทำงาน</h3>
+              <div className="mt-5">
+                <NavLink
+                  to={"/other"}
+                  className="inline-flex h-10 items-center justify-center rounded-lg border bg-blue-500  px-5 text-sm font-medium text-white shadow-md transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 group"
+                >
+                  อ่านเพิ่มเติม
+                  <Book className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </NavLink>
+              </div>
             </div>
           </div>
         </div>
@@ -145,15 +216,6 @@ const Home = () => {
                 เช่น คอมพิวเตอร์เปิดไม่ติด, หน้าจอไม่แสดงผล, คีย์บอร์ดหรือเมาส์ใช้งานไม่ได้ <br /> ฮาร์ดดิสก์มีปัญหา,
                 เครื่องปริ้นเตอร์ไม่ทำงาน
               </p>
-              <div className="mt-2">
-                <a
-                  href="#"
-                  className="inline-flex h-12 items-center justify-center rounded-lg border bg-blue-500  px-5 text-base font-medium text-white shadow-md transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 group"
-                >
-                  อ่านเพิ่มเติม
-                  <Book className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </a>
-              </div>
             </div>
           </div>
 
@@ -169,15 +231,6 @@ const Home = () => {
                 เช่น โปรแกรมค้างหรือทำงานผิดปกติ, ไม่สามารถติดตั้งโปรแกรมได้, ระบบปฏิบัติการมีข้อผิดพลาด <br /> ไวรัสหรือมัลแวร์,
                 การใช้งานโปรแกรมเฉพาะทางมีปัญหา
               </p>
-              <div className="mt-2">
-                <a
-                  href="#"
-                  className="inline-flex h-12 items-center justify-center rounded-lg border bg-blue-500  px-5 text-base font-medium text-white shadow-md transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 group"
-                >
-                  อ่านเพิ่มเติม
-                  <Book className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </a>
-              </div>
             </div>
             <img
               src="./home/software.jpeg"
@@ -202,15 +255,6 @@ const Home = () => {
                 เช่น ไม่สามารถเชื่อมต่ออินเทอร์เน็ตได้, สัญญาณ Wi-Fi อ่อนหรือไม่เสถียร <br /> เข้าถึงเว็บไซต์หรือแอปพลิเคชันบางอย่างไม่ได้
                 ระบบเครือข่ายภายในขัดข้อง
               </p>
-              <div className="mt-2">
-                <a
-                  href="#"
-                  className="inline-flex h-12 items-center justify-center rounded-lg border bg-blue-500  px-5 text-base font-medium text-white shadow-md transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 group"
-                >
-                  อ่านเพิ่มเติม
-                  <Book className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </a>
-              </div>
             </div>
           </div>
 
@@ -224,15 +268,6 @@ const Home = () => {
               <p className="text-slate-600 mt-2 md:text-lg">
                 เช่น ปัญหาการเข้าสู่ระบบ NAS, การลืมรหัสผ่าน, ปัญหาเกี่ยวกับบัญชีผู้ใช้งาน <br /> การสำรองข้อมูลและกู้คืนข้อมูล
               </p>
-              <div className="mt-2">
-                <a
-                  href="#"
-                  className="inline-flex h-12 items-center justify-center rounded-lg border bg-blue-500  px-5 text-base font-medium text-white shadow-md transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 group"
-                >
-                  อ่านเพิ่มเติม
-                  <Book className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </a>
-              </div>
             </div>
             <img
               src="./home/other.jpeg"
@@ -244,10 +279,12 @@ const Home = () => {
       </section>
       {/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */}
 
+      {/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */}
+
       <section className="container mx-auto py-20">
         <h1 className="text-4xl font-bold text-center flex items-center justify-center">
           <span className="w-32 h-1 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600"></span>
-          <h1 className="mx-5 text-5xl font-medium text-blue-800">การแก้ไขปัญหา</h1>
+          <h1 className="mx-5 text-5xl font-medium text-blue-800">การแก้ไขปัญหาเบื้องต้น</h1>
           <span className="w-32 h-1 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600"></span>
         </h1>
         <p className="mt-3 text-slate-500 md:text-lg text-center mb-10">รวบรวมการแก้ไขปัญหาเบื้องต้นเกี่ยวกับไอที</p>
@@ -274,20 +311,14 @@ const Home = () => {
                     </li>
                   ))}
                 </ul>
-
-                {/* <a
-                  // href={`/troubleshooting/${guide.id}`}
-                  href="#"
-                  className="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 gap-1 group mt-2"
-                >
-                  ดูรายละเอียดเพิ่มเติม
-                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </a> */}
               </div>
             ))}
           </div>
         </div>
       </section>
+      {/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */}
+
+      {/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */}
 
       <section className="container mx-auto py-20">
         <h1 className="text-4xl font-bold text-center flex items-center justify-center">
@@ -296,7 +327,6 @@ const Home = () => {
           <span className="w-32 h-1 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600"></span>
         </h1>
         <p className="mt-3 text-slate-500 md:text-lg text-center mb-10">คำแนะนำง่ายๆ ในการดูแลอุปกรณ์ไอทีให้ใช้งานได้ยาวนาน</p>
-      
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="border border-blue-800 backdrop-blur-sm p-6 rounded-lg">
@@ -319,8 +349,8 @@ const Home = () => {
 
           <div className="border border-blue-800 backdrop-blur-sm p-6 rounded-lg">
             <CheckCircle2 className="h-8 w-8 text-blue-800 mb-4" />
-            <h3 className="text-xl font-bold mb-2 text-blue-800">ใช้เครื่องสำรองไฟ (UPS)</h3>
-            <p className="text-black">ใช้เครื่องสำรองไฟเพื่อป้องกันความเสียหายจากไฟตกหรือไฟดับ</p>
+            <h3 className="text-xl font-bold mb-2 text-blue-800">จัดการข้อมูลให้เป็นระเบียบ</h3>
+            <p className="text-black">ไม่ควรเก็บข้อมูลไว้ที่หน้า Desktop ถ้ามีปัญหาอาจทำให้ข้อมูลหาย ควรเก็บไว้ที่ไดฟ์กลางหรือแฟรชไดฟ์</p>
           </div>
 
           <div className="border border-blue-800 backdrop-blur-sm p-6 rounded-lg">
@@ -336,6 +366,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */}
     </Layout>
   );
 };

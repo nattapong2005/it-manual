@@ -18,7 +18,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="mr-2 text-slate-400 flex-shrink-0 mt-1" size={18} />
-                <span className="text-slate-300">LINE OA:</span>
+                <span className="text-slate-300">LINE OA: @489hwjzq</span>
               </li>
             </ul>
           </div>
