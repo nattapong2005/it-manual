@@ -18,7 +18,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="mr-2 text-slate-400 flex-shrink-0 mt-1" size={18} />
-                <span className="text-slate-300">LINE OA:</span>
+                <span className="text-slate-300">LINE OA: @489hwjzq</span>
               </li>
             </ul>
           </div>
@@ -44,7 +44,7 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-slate-400 text-sm">&copy; {new Date().getFullYear()} Masaru Marketing All rights reserved.</p>
-          <p className="text-slate-400 text-sm flex gap-2 items-center">Made with loves <Heart size={20}/></p>
+          <p className="text-slate-400 text-sm flex gap-2 items-center">Made with loves <Heart size={20}/> by IT Dev</p>
         </div>
       </div>
     </footer>
