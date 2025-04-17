@@ -3,7 +3,6 @@ import Layout from "../components/Layout";
 import issue from "../data/problem.json";
 import {
   ArrowRight,
-  HardDrive,
   WrenchIcon,
   AlertCircle,
   TriangleAlert,
@@ -11,16 +10,10 @@ import {
   Book,
   Settings,
   Wifi,
-  Monitor,
-  CheckCircle,
   CheckCircle2,
   Laptop,
-  Computer,
   Server,
-  Network,
-  AppWindow,
   Printer,
-  Download,
 } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
