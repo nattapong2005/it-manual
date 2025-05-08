@@ -7,6 +7,7 @@ import Software from "./pages/Problem/Software";
 import Network from "./pages/Problem/Network";
 import Other from "./pages/Problem/Other";
 import FixTop from './FixTop';
+import Crack from "./pages/Crack/Crack";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/software" element={<Software/>} />
           <Route path="/network" element={<Network/>}/>
           <Route path="/other" element={<Other/>} />
+          <Route path="/crack" element={<Crack/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>

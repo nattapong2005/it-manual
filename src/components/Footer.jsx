@@ -1,11 +1,12 @@
 import React from "react";
-import { Mail, Phone, MapPin, Clock, Facebook, Twitter, Linkedin, Instagram, Heart } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Heart, Wrench } from "lucide-react";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 text-white py-10">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
             <h3 className="text-xl font-bold mb-4">Masaru Marketing</h3>
@@ -32,6 +33,18 @@ const Footer = () => {
                 <div className="text-slate-300">
                   <p className="font-semibold">จันทร์ - เสาร์</p>
                   <p>8:30 น. - 17:30 น.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-bold mb-4">อื่นๆ</h3>
+            <ul className="space-y-2">
+              <li className="flex items-start">
+                <Wrench className="mr-2 text-slate-400 flex-shrink-0 mt-1" size={18} />
+                <div className="text-slate-300">
+                  <NavLink to={"/crack"} className="font-semibold">รวมโปรแกรม Crack</NavLink>
                 </div>
               </li>
             </ul>

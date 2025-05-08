@@ -374,9 +374,9 @@ const Home = () => {
           <span className="w-0 sm:w-32 h-1 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600"></span>
         </h1>
         <div className="flex flex-wrap justify-center gap-10 items-center mt-10">
-        <div>
-            <img src="https://play-lh.googleusercontent.com/jSuWySmy_T3qzqyTkwtffwTeGLGnT5AfA00JFMlBNW3Hq8WXvFfXz7cpi70H2Pqra8H3" width={200} className="rounded-full" />
-          </div>
+        <a href="https://line.me/ti/p/@489hwjzq" target="_blank">
+            <img src="https://play-lh.googleusercontent.com/jSuWySmy_T3qzqyTkwtffwTeGLGnT5AfA00JFMlBNW3Hq8WXvFfXz7cpi70H2Pqra8H3" width={200} className="rounded-full cursour-pointer" />
+          </a>
           <h1 className="text-4xl font-bold">@489hwjzq</h1>
         </div>
       </section>
