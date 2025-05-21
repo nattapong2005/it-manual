@@ -41,13 +41,13 @@ const Crack = () => {
 
       {/* Program 2 */}
       <div className="flex flex-col sm:flex-row justify-center items-center mb-16 space-y-6 sm:space-y-0 sm:space-x-8">
-        <div className="flex-shrink-0">
+        <a target="_blank" href="https://drive.google.com/file/d/1it_bVtlFtSj2s-UF2vcqywHjTFEqhjnz/view?usp=sharing" className="flex-shrink-0">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Microsoft_Office_logo_%282013%E2%80%932019%29.svg/405px-Microsoft_Office_logo_%282013%E2%80%932019%29.svg.png"
             alt="Microsoft Office logo"
             className="w-48 h-48 object-cover"
           />
-        </div>
+        </a>
         <div className="flex flex-col items-center space-y-4">
           <h2 className="text-xl font-semibold text-gray-700">Microsoft Office</h2>
           <div className="flex gap-4">
