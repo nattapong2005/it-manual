@@ -375,7 +375,7 @@ const Home = () => {
         </h1>
         <div className="flex flex-wrap justify-center gap-10 items-center mt-10">
         <a href="https://line.me/ti/p/@489hwjzq" target="_blank">
-            <img src="https://play-lh.googleusercontent.com/jSuWySmy_T3qzqyTkwtffwTeGLGnT5AfA00JFMlBNW3Hq8WXvFfXz7cpi70H2Pqra8H3" width={200} className="rounded-full cursour-pointer" />
+            <img src="https://rocket.in.th/wp-content/uploads/2023/03/%E0%B8%AA%E0%B8%A3%E0%B8%B8%E0%B8%9B-Line-Official-Account.png" width={200} className="rounded-full cursour-pointer" />
           </a>
           <h1 className="text-4xl font-bold">@489hwjzq</h1>
         </div>
