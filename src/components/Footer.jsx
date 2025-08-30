@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Phone, MapPin, Clock, Heart, Wrench } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Heart, Wrench, AppWindow } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
@@ -45,6 +45,12 @@ const Footer = () => {
                 <Wrench className="mr-2 text-slate-400 flex-shrink-0 mt-1" size={18} />
                 <div className="text-slate-300">
                   <NavLink to={"/crack"} className="font-semibold">รวมโปรแกรม Crack</NavLink>
+                </div>
+              </li>
+               <li className="flex items-start">
+                <AppWindow className="mr-2 text-slate-400 flex-shrink-0 mt-1" size={18} />
+                <div className="text-slate-300">
+                  <NavLink to={"/slide"} className="font-semibold">สไลด์เกี่ยวกับ Windows</NavLink>
                 </div>
               </li>
             </ul>
